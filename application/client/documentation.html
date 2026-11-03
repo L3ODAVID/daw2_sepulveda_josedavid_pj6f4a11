@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,53 +7,102 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>StyleStore</h1>
-        <nav>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">STYLE<span>STORE</span></a>
+
+        <nav class="main-nav">
             <a href="index.html">Home</a>
-            <a href="documentation.html">Documentation</a>
-            <a href="login.html">Login</a>
+            <a href="documentation.html" class="active">Documentation</a>
+            <a href="login.html" class="nav-button">Login</a>
         </nav>
     </header>
 
-    <main>
-        <h2>Project Documentation</h2>
+    <main class="documentation-page">
 
-        <section>
-            <h3>Purpose</h3>
+        <section class="page-heading">
+            <p class="eyebrow">STYLESTORE PLATFORM</p>
+            <h1>Documentation</h1>
             <p>
-                StyleStore is a web application for managing
-                clothing orders and customer information.
+                Learn how to use the StyleStore clothing order management
+                application.
             </p>
         </section>
 
-        <section>
-            <h3>Application Features</h3>
-            <ul>
-                <li>User authentication.</li>
-                <li>Create a new customer order.</li>
-                <li>Calculate the order total, including 21% VAT.</li>
-                <li>View all saved orders.</li>
-                <li>Search for an order by its ID.</li>
-            </ul>
+        <section class="documentation-content">
+
+            <article class="documentation-card">
+                
+                <h2>About the application</h2>
+                <p>
+                    StyleStore is a web application designed to manage
+                    clothing orders. It allows users to access the platform,
+                    create new orders and consult previously registered orders.
+                </p>
+            </article>
+
+            <article class="documentation-card">
+                <span class="feature-number">02</span>
+                <h2>User authentication</h2>
+                <p>
+                    Users must log in with their username and password.
+                    The server checks the credentials before allowing access
+                    to the application operations.
+                </p>
+            </article>
+
+            <article class="documentation-card">
+                <span class="feature-number">03</span>
+                <h2>Create an order</h2>
+                <p>
+                    The user can enter customer information, select clothing
+                    products and specify the quantity of each selected product.
+                    The order is sent to the server for processing.
+                </p>
+            </article>
+
+            <article class="documentation-card">
+                <span class="feature-number">04</span>
+                <h2>Order total and VAT</h2>
+                <p>
+                    The server calculates the order total and applies
+                    the required 21% VAT. The client displays the result
+                    returned by the server.
+                </p>
+            </article>
+
+            <article class="documentation-card">
+                <span class="feature-number">05</span>
+                <h2>View orders</h2>
+                <p>
+                    Users can consult all saved orders or search for an
+                    individual order using its order ID.
+                </p>
+            </article>
+
+            <article class="documentation-card">
+                <span class="feature-number">06</span>
+                <h2>Technologies</h2>
+                <ul>
+                    <li>HTML5 for the application structure.</li>
+                    <li>CSS3 for the visual design.</li>
+                    <li>JavaScript for client-side interaction.</li>
+                    <li>PHP for server-side processing.</li>
+                    <li>JSON for storing users and orders.</li>
+                    <li>Apache through XAMPP for local development.</li>
+                </ul>
+            </article>
+
         </section>
 
-        <section>
-            <h3>Technologies</h3>
-            <ul>
-                <li>HTML5 and CSS3</li>
-                <li>JavaScript</li>
-                <li>PHP</li>
-                <li>JSON file storage</li>
-                <li>Apache web server</li>
-            </ul>
-        </section>
+        <div class="center-button">
+            <a href="index.html" class="secondary-button">Back to Home</a>
+            <a href="login.html" class="primary-button">Go to Login</a>
+        </div>
 
-        <a class="button" href="index.html">Back to Home</a>
     </main>
 
-    <footer>
-        <p>&copy; 2026 StyleStore</p>
-    </footer>
+   
+
 </body>
 </html>
