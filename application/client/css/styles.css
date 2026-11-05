@@ -506,7 +506,7 @@ button, input {
     }
 }
 
-@media (max-width: 450px) {a
+@media (max-width: 450px) {
 
     .visual-center h1 {
         font-size: 70px;
