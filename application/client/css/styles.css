@@ -524,3 +524,60 @@ button, input {
         padding: 23px;
     }
 }
+
+/*OPERATIONS*/
+
+.operations-page {
+    min-height: 75vh;
+    padding: 75px 10%;
+}
+
+.operations-heading {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.operations-heading h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
+}
+
+.operations-heading > p:last-child {
+    color: var(--grey);
+}
+
+.operations-content {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.operation-card {
+    padding: 40px;
+    border: 1px solid #e9e6de;
+    background: var(--white);
+}
+
+.operation-card h2 {
+    margin-bottom: 15px;
+    font-size: 27px;
+}
+
+.operation-card p {
+    min-height: 75px;
+    margin-bottom: 25px;
+    color: var(--grey);
+    font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .operations-content {
+        grid-template-columns: 1fr;
+    }
+
+    .operations-page {
+        padding: 50px 6%;
+    }
+}
