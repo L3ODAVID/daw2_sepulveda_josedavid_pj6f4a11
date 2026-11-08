@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleStore | Create Order</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">STYLESTORE</a>
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="operations.html">Operations</a>
+            <a href="documentation.html">Documentation</a>
+        </nav>
+    </header>
+
+    <main class="create-order-page">
+
+        <section class="operations-heading">
+            <p class="eyebrow">STYLESTORE / NEW ORDER</p>
+            <h1>Create an order</h1>
+            <p>Enter customer details and select the products.</p>
+        </section>
+
+        <form id="orderForm" class="order-form">
+
+            <section class="form-section">
+                <h2>Customer information</h2>
+
+                <div class="form-group">
+                    <label for="orderId">Order ID</label>
+                    <input type="text" id="orderId" name="orderId" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerName">Full name</label>
+                    <input type="text" id="customerName" name="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Physical address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Select products</h2>
+
+                <div class="product-row">
+                    <label>
+                        <input type="checkbox" name="products[0][active]" value="1">
+                        Classic T-Shirt — €20
+                    </label>
+                    <input type="hidden" name="products[0][name]" value="Classic T-Shirt">
+                    <input type="hidden" name="products[0][price]" value="20">
+                    <label for="quantity0">Quantity</label>
+                    <input type="number" id="quantity0" name="products[0][quantity]" min="1" value="1">
+                </div>
+
+                <div class="product-row">
+                    <label>
+                        <input type="checkbox" name="products[1][active]" value="1">
+                        Basic Hoodie — €35
+                    </label>
+                    <input type="hidden" name="products[1][name]" value="Basic Hoodie">
+                    <input type="hidden" name="products[1][price]" value="35">
+                    <label for="quantity1">Quantity</label>
+                    <input type="number" id="quantity1" name="products[1][quantity]" min="1" value="1">
+                </div>
+
+                <div class="product-row">
+                    <label>
+                        <input type="checkbox" name="products[2][active]" value="1">
+                        Denim Jeans — €45
+                    </label>
+                    <input type="hidden" name="products[2][name]" value="Denim Jeans">
+                    <input type="hidden" name="products[2][price]" value="45">
+                    <label for="quantity2">Quantity</label>
+                    <input type="number" id="quantity2" name="products[2][quantity]" min="1" value="1">
+                </div>
+
+                <div class="product-row">
+                    <label>
+                        <input type="checkbox" name="products[3][active]" value="1">
+                        Summer Dress — €50
+                    </label>
+                    <input type="hidden" name="products[3][name]" value="Summer Dress">
+                    <input type="hidden" name="products[3][price]" value="50">
+                    <label for="quantity3">Quantity</label>
+                    <input type="number" id="quantity3" name="products[3][quantity]" min="1" value="1">
+                </div>
+            </section>
+
+            <button type="submit" class="primary-button">
+                Submit order
+            </button>
+
+            <p id="orderMessage" class="form-message"></p>
+
+        </form>
+
+        <div class="order-navigation">
+            <a href="operations.html" class="secondary-button">Back to operations</a>
+            <a href="index.html" class="secondary-button">Home</a>
+        </div>
+
+    </main>
+
+    <script src="js/createOrder.js"></script>
+</body>
+</html>

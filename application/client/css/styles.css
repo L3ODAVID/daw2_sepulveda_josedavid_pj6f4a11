@@ -1,5 +1,4 @@
-
-/*1. GENERAL*/
+/* GENERAL */
 
 :root {
     --cream: #f7f6f2;
@@ -19,7 +18,7 @@
 body {
     font-family: Arial, sans-serif;
     background: var(--cream);
-    color: #222;
+    color: var(--dark);
     line-height: 1.6;
 }
 
@@ -38,12 +37,13 @@ button, input {
 }
 
 .eyebrow {
+    margin-bottom: 18px;
     color: #999080;
     font-size: 11px;
     letter-spacing: 3px;
-    margin-bottom: 18px;
 }
 
+/* HEADER AND FOOTER */
 
 .site-header, .site-footer {
     padding: 25px 8%;
@@ -54,7 +54,7 @@ button, input {
 
 .site-header {
     background: var(--white);
-    border-bottom: 1px solid #e8e6e0;
+    border-bottom: 1px solid var(--beige);
 }
 
 .logo {
@@ -69,23 +69,22 @@ button, input {
 }
 
 .main-nav a {
-    font-size: 14px;
     color: #555;
+    font-size: 14px;
 }
 
-.main-nav a:hover, .main-nav a.active {
+.main-nav a:hover {
     color: #000;
     font-weight: bold;
 }
 
-.main-nav .nav-button, .primary-button {
+.site-footer {
     background: var(--dark);
-    color: var(--white);
+    color: #ccc;
+    font-size: 12px;
 }
 
-.main-nav .nav-button {
-    padding: 10px 20px;
-}
+/* BUTTONS */
 
 .primary-button, .secondary-button {
     display: inline-block;
@@ -95,6 +94,11 @@ button, input {
     font-size: 13px;
     cursor: pointer;
     transition: 0.3s;
+}
+
+.primary-button {
+    background: var(--dark);
+    color: var(--white);
 }
 
 .secondary-button {
@@ -118,14 +122,7 @@ button, input {
     font-weight: bold;
 }
 
-.site-footer {
-    background: var(--dark);
-    color: #ccc;
-    font-size: 12px;
-}
-
-
-/*2. INDEX*/
+/* HOME */
 
 .home-landing {
     min-height: 100vh;
@@ -156,9 +153,9 @@ button, input {
 }
 
 .visual-label, .visual-footer, .content-footer {
+    color: #c8c1b5;
     font-size: 10px;
     letter-spacing: 2px;
-    color: #c8c1b5;
 }
 
 .visual-center {
@@ -218,7 +215,6 @@ button, input {
     justify-content: space-between;
     align-items: center;
     font-size: 13px;
-    transition: 0.3s;
 }
 
 .login-button {
@@ -226,24 +222,15 @@ button, input {
     color: var(--white);
 }
 
-.login-button:hover {
-    background: #514b42;
-}
-
 .documentation-button {
     border: 1px solid #d8d1c6;
-}
-
-.documentation-button:hover {
-    background: var(--cream);
 }
 
 .content-footer {
     color: #a39b90;
 }
 
-
-/*3. LOGIN*/
+/* LOGIN */
 
 .login-page {
     min-height: 700px;
@@ -252,8 +239,6 @@ button, input {
 }
 
 .login-decoration {
-    position: relative;
-    overflow: hidden;
     padding: 80px 12%;
     display: flex;
     flex-direction: column;
@@ -261,29 +246,15 @@ button, input {
     background: var(--beige);
 }
 
-.login-decoration::after {
-    content: "SS";
-    position: absolute;
-    right: -45px;
-    bottom: -100px;
-    color: #ffffff38;
-    font: 320px Georgia, serif;
-}
-
 .login-decoration h1 {
-    position: relative;
-    z-index: 1;
     margin-bottom: 25px;
     font-size: 60px;
     line-height: 1.1;
 }
 
 .login-decoration > p:last-child {
-    position: relative;
-    z-index: 1;
     max-width: 390px;
     color: var(--grey);
-    font-size: 15px;
 }
 
 .login-container {
@@ -324,20 +295,13 @@ button, input {
 .form-group input {
     width: 100%;
     padding: 15px;
-    border: 1px solid #e5e2da;
-    outline: none;
+    border: 1px solid var(--beige);
     background: #faf9f6;
-}
-
-.form-group input:focus {
-    border-color: #777064;
-    background: var(--white);
 }
 
 .login-box .full-button {
     min-height: 50px;
     margin-top: 10px;
-    text-transform: uppercase;
     letter-spacing: 2px;
 }
 
@@ -348,38 +312,29 @@ button, input {
     font-size: 13px;
 }
 
-.login-box .text-link {
-    margin-top: 25px;
-    color: #555;
-}
+/* DOCUMENTATION */
 
-
-/*4. DOCUMENTATION*/
-
-.documentation-page {
+.documentation-page, .operations-page, .create-order-page {
     min-height: 75vh;
-    padding: 75px 10%;
+    padding: 60px 8%;
 }
 
-.page-heading {
-    max-width: 750px;
-    margin: 0 auto 60px;
+.page-heading, .operations-heading {
+    margin: 0 auto 50px;
     text-align: center;
 }
 
-.page-heading h1 {
-    margin-bottom: 20px;
-    font-size: 55px;
+.page-heading h1, .operations-heading h1 {
+    margin-bottom: 15px;
+    font-size: 50px;
 }
 
-.page-heading > p:last-child {
-    max-width: 550px;
-    margin: auto;
+.page-heading > p:last-child,
+.operations-heading > p:last-child {
     color: var(--grey);
-    font-size: 15px;
 }
 
-.documentation-content {
+.documentation-content, .operations-content {
     max-width: 1100px;
     margin: auto;
     display: grid;
@@ -387,16 +342,25 @@ button, input {
     gap: 25px;
 }
 
-.documentation-card {
+.documentation-card, .operation-card {
     padding: 35px;
-    border: 1px solid #e9e6de;
+    border: 1px solid var(--beige);
     background: var(--white);
-    transition: 0.3s;
 }
 
-.documentation-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 25px #0000000f;
+.documentation-card h2, .operation-card h2 {
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.documentation-card p, .documentation-card li,
+.operation-card p {
+    color: var(--grey);
+    font-size: 14px;
+}
+
+.documentation-card ul {
+    padding-left: 20px;
 }
 
 .feature-number {
@@ -407,41 +371,102 @@ button, input {
     letter-spacing: 3px;
 }
 
-.documentation-card h2 {
-    margin-bottom: 15px;
-    font-size: 25px;
-}
-
-.documentation-card p, .documentation-card li {
-    color: var(--grey);
-    font-size: 14px;
-    line-height: 1.9;
-}
-
-.documentation-card ul {
-    margin-top: 12px;
-    padding-left: 20px;
-}
-
 .center-button {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     gap: 18px;
 }
 
-.center-button a {
-    min-width: 160px;
-    font-size: 11px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+/* OPERATIONS */
+
+.operations-content {
+    max-width: 1000px;
 }
 
+.operation-card p {
+    margin-bottom: 25px;
+}
 
-/*RESPONSIVE*/
+/* CREATE ORDER */
+
+.order-form {
+    max-width: 850px;
+    margin: auto;
+    padding: 35px;
+    background: var(--white);
+    border: 1px solid var(--beige);
+}
+
+.form-section {
+    margin-bottom: 35px;
+}
+
+.form-section h2 {
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.order-form input:not([type="checkbox"]) {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--beige);
+    background: var(--cream);
+}
+
+.product-row {
+    padding: 18px 0;
+    display: grid;
+    grid-template-columns: 2fr 1fr 100px;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid var(--beige);
+}
+
+.product-row label:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-row input[type="checkbox"] {
+    accent-color: var(--dark);
+}
+
+.order-form button {
+    border: none;
+}
+
+.order-navigation {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* VIEW ORDERS */
+
+.order-search {
+    max-width: 850px;
+    margin: auto;
+    padding: 25px;
+    background: var(--white);
+    border: 1px solid var(--beige);
+}
+
+.order-search input {
+    padding: 12px;
+    border: 1px solid var(--beige);
+}
+
+.orders-result {
+    max-width: 850px;
+    margin: 25px auto;
+}
+
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
-
     .site-header, .site-footer {
         flex-direction: column;
         gap: 18px;
@@ -453,7 +478,8 @@ button, input {
         justify-content: center;
     }
 
-    .welcome-card, .login-page {
+    .welcome-card, .login-page,
+    .documentation-content, .operations-content {
         grid-template-columns: 1fr;
     }
 
@@ -472,112 +498,31 @@ button, input {
 
     .login-decoration {
         min-height: 320px;
-        padding: 50px 8%;
     }
 
     .login-decoration h1 {
         font-size: 45px;
     }
 
-    .login-container {
-        padding: 50px 8%;
+    .documentation-page, .operations-page,
+    .create-order-page {
+        padding: 40px 5%;
     }
 
-    .documentation-page {
-        padding: 50px 6%;
+    .page-heading h1, .operations-heading h1 {
+        font-size: 40px;
     }
 
-    .page-heading h1 {
-        font-size: 42px;
+    .product-row {
+        grid-template-columns: 1fr 90px;
     }
 
-    .documentation-content {
-        grid-template-columns: 1fr;
+    .product-row label:first-child {
+        grid-column: 1 / -1;
     }
 
-    .center-button {
+    .order-navigation, .center-button {
         flex-direction: column;
         align-items: center;
-    }
-
-    .center-button a {
-        width: 100%;
-        max-width: 280px;
-    }
-}
-
-@media (max-width: 450px) {
-
-    .visual-center h1 {
-        font-size: 70px;
-    }
-
-    .login-box h2 {
-        font-size: 34px;
-    }
-
-    .page-heading h1 {
-        font-size: 36px;
-    }
-
-    .documentation-card {
-        padding: 23px;
-    }
-}
-
-/*OPERATIONS*/
-
-.operations-page {
-    min-height: 75vh;
-    padding: 75px 10%;
-}
-
-.operations-heading {
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.operations-heading h1 {
-    margin-bottom: 15px;
-    font-size: 50px;
-}
-
-.operations-heading > p:last-child {
-    color: var(--grey);
-}
-
-.operations-content {
-    max-width: 1000px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.operation-card {
-    padding: 40px;
-    border: 1px solid #e9e6de;
-    background: var(--white);
-}
-
-.operation-card h2 {
-    margin-bottom: 15px;
-    font-size: 27px;
-}
-
-.operation-card p {
-    min-height: 75px;
-    margin-bottom: 25px;
-    color: var(--grey);
-    font-size: 14px;
-}
-
-@media (max-width: 768px) {
-    .operations-content {
-        grid-template-columns: 1fr;
-    }
-
-    .operations-page {
-        padding: 50px 6%;
     }
 }

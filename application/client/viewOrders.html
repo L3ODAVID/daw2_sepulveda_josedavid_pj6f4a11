@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleStore | View Orders</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a href="index.html" class="logo">STYLESTORE</a>
+
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="operations.html">Operations</a>
+            <a href="documentation.html">Documentation</a>
+        </nav>
+    </header>
+
+    <main class="documentation-page">
+
+        <section class="page-heading">
+            <p class="eyebrow">STYLESTORE / ORDERS</p>
+            <h1>View orders</h1>
+            <p>Consult all orders or search by Order ID.</p>
+        </section>
+
+        <section class="order-search">
+            <form id="searchForm">
+                <label for="orderId">Search by Order ID</label>
+                <input
+                    type="text"
+                    id="orderId"
+                    name="orderId"
+                    placeholder="Enter Order ID"
+                >
+                <button type="submit" class="primary-button">
+                    Search
+                </button>
+            </form>
+
+            <button id="showAllButton" class="secondary-button">
+                Show all orders
+            </button>
+        </section>
+
+        <section id="ordersResult" class="orders-result">
+            <p>Orders will appear here.</p>
+        </section>
+
+        <div class="order-navigation">
+            <a href="operations.html" class="secondary-button">
+                Back to operations
+            </a>
+            <a href="index.html" class="secondary-button">
+                Home
+            </a>
+        </div>
+
+    </main>
+
+    <footer class="site-footer">
+        <span>STYLESTORE © 2026</span>
+        <span>FASHION WITH PURPOSE.</span>
+    </footer>
+
+    <script src="js/viewOrders.js"></script>
+
+</body>
+</html>
